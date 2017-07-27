@@ -10,7 +10,11 @@
 # Given "pwwkew", the answer is "wke", with the length of 3.
 # Note that the answer must be a substring,
 # "pwke" is a subsequence and not a substring.
-
+# 遍历字符串，过程中将出现过的字符存入字典，key为字符，value为字符下标
+# 用maxLength保存遍历过程中找到的最大不重复子串的长度
+# 用start保存最长子串的开始下标
+# 如果字符已经出现在字典中，更新start的值
+# 如果字符不在字典中，更新maxLength的值
 def longest_non_repeat(s):
     start, maxlen = 0, 0
     used_char = {}
